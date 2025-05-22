@@ -4,7 +4,7 @@ import { iSize, iTheme } from '@/lib/types';
 import Input from '@/components/Common/input';
 import Select from '@/components/Common/select';
 import Actions from '@/components/Common/Actions';
-import { iOrganizer } from '..';
+import { iOrganizer } from '../page';
 
 interface EditOrgFormProps {
   editingOrganizer: iOrganizer | null;
