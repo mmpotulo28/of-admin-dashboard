@@ -1,7 +1,7 @@
 .AuthPage {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 30px;
   padding: 40px 0;
   gap: 40px;

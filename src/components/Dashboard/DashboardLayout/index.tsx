@@ -16,6 +16,7 @@ import {
 import DashboardSkeleton from '@/components/skeletons/dashboard/DashboardSkeleton';
 import MainSkeleton from '@/components/skeletons/dashboard/MainSkeleton';
 import Header from '@/components/Header';
+import { AccessControlProvider } from '@/context/AccessControlContext';
 
 interface iDashboardLayoutProps {
   children: ReactNode;
@@ -91,34 +92,36 @@ const DashboardLayout: React.FC<iDashboardLayoutProps> = ({ children }) => {
 
   return (
     <Suspense fallback={<DashboardSkeleton />}>
-      <section
-        className={`${styles.userDashLayout} ${
-          isSidebarVisible ? '' : styles.sidebarHidden
-        }`}
-      >
-        <Sidebar links={links} isVisible={isSidebarVisible}>
-          <button
-            className={styles.toggleBtn}
-            onClick={toggleSidebar}
-            aria-label="Toggle Sidebar"
-          >
-            {isSidebarVisible ? (
-              <MdKeyboardDoubleArrowLeft />
-            ) : (
-              <MdKeyboardDoubleArrowRight />
-            )}
-          </button>
-        </Sidebar>
-        <Suspense fallback={<MainSkeleton />}>
-          <main className={styles.mainContent}>
-            <Header
-              logoSrc={'/image/logo-long.jpg'}
-              logoAlt={'OnlyFriends Logo'}
-            />
-            {children}
-          </main>
-        </Suspense>
-      </section>
+      <AccessControlProvider>
+        <section
+          className={`${styles.userDashLayout} ${
+            isSidebarVisible ? '' : styles.sidebarHidden
+          }`}
+        >
+          <Sidebar links={links} isVisible={isSidebarVisible}>
+            <button
+              className={styles.toggleBtn}
+              onClick={toggleSidebar}
+              aria-label="Toggle Sidebar"
+            >
+              {isSidebarVisible ? (
+                <MdKeyboardDoubleArrowLeft />
+              ) : (
+                <MdKeyboardDoubleArrowRight />
+              )}
+            </button>
+          </Sidebar>
+          <Suspense fallback={<MainSkeleton />}>
+            <main className={styles.mainContent}>
+              <Header
+                logoSrc={'/image/logo-long.jpg'}
+                logoAlt={'OnlyFriends Logo'}
+              />
+              {children}
+            </main>
+          </Suspense>
+        </section>
+      </AccessControlProvider>
     </Suspense>
   );
 };

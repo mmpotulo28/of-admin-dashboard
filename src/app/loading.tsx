@@ -1,7 +1,7 @@
-import DashboardSkeleton from '@/components/skeletons/dashboard/DashboardSkeleton';
+import PopupLoader, { iLoaderVariant } from '@/components/PopupLoader';
 
 export default function Loading() {
   // Stack uses React Suspense, which will render this page while user data is being fetched.
   // See: https://nextjs.org/docs/app/api-reference/file-conventions/loading
-  return <DashboardSkeleton />;
+  return <PopupLoader variant={iLoaderVariant.Circle} />;
 }
