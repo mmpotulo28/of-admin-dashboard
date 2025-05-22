@@ -1,10 +1,11 @@
 import React from 'react';
 import Pagination from '@/components/pagination';
 import styles from '../users.module.css';
-import { iApiUser } from '../page';
+
 import Image from 'next/image';
 import { MdVerifiedUser } from 'react-icons/md';
 import { BiQuestionMark } from 'react-icons/bi';
+import { iApiUser } from '@/lib/types';
 
 interface UserTableProps {
   paginatedUsers: iApiUser[];

@@ -1,8 +1,15 @@
-import { iFormState, iFormAction, iFullEvent, iStatus, iVenue } from './types';
+import {
+  iFormState,
+  iFormAction,
+  iFullEvent,
+  iStatus,
+  iVenue,
+  ApiResponse,
+  iApiUser,
+} from './types';
 import axios, { AxiosResponse, isAxiosError } from 'axios';
 import { CurrentInternalUser, CurrentUser } from '@stackframe/stack';
 import { iTeamId } from '@/context/AccessControlContext';
-import { ApiResponse, iApiUser } from '@/app/users/page';
 
 /**
  * Scrolls the window smoothly to the element with the specified ID.

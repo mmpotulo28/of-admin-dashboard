@@ -249,3 +249,47 @@ export interface iOrganizer {
   eventCount: number;
   revenue: number;
 }
+
+export interface SelectedTeam {
+  created_at_millis: number;
+  id: string;
+  display_name: string;
+  profile_image_url: string;
+  server_metadata: Record<string, any>;
+  client_metadata: Record<string, any>;
+  client_read_only_metadata: Record<string, any>;
+}
+
+export interface iApiUser {
+  id: string;
+  primary_email_verified: boolean;
+  primary_email_auth_enabled: boolean;
+  signed_up_at_millis: number;
+  last_active_at_millis: number;
+  is_anonymous: boolean;
+  primary_email: string;
+  display_name: string;
+  selected_team?: SelectedTeam;
+  selected_team_id?: string;
+  profile_image_url: string;
+  client_metadata: Record<string, any> | null;
+  client_read_only_metadata: Record<string, any> | null;
+  server_metadata: Record<string, any> | null;
+  auth_with_email?: boolean;
+  has_password?: boolean;
+  oauth_providers?: Array<{
+    id: string;
+    account_id: string;
+    email: string;
+  }>;
+  otp_auth_enabled?: boolean;
+  passkey_auth_enabled?: boolean;
+  requires_totp_mfa?: boolean;
+}
+
+export interface ApiResponse {
+  items: iApiUser[];
+  pagination: {
+    next_cursor: string;
+  };
+}
