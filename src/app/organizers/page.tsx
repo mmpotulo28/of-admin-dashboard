@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import DashboardLayout from '@/components/Dashboard/DashboardLayout';
 import LockUp from '@/components/Common/lockup';
-import { iSize, iTheme, iVariant } from '@/lib/types';
+import { iOrganizer, iSize, iTheme, iVariant } from '@/lib/types';
 import Actions from '@/components/Common/Actions';
 import Modal from '@/components/Modal';
 import {
@@ -16,18 +16,6 @@ import EditOrgForm from './components/EditOrgForm';
 import OrgTable from './components/OrgTable';
 import styles from './organizers.module.css';
 import { MdOutlineAddCircleOutline } from 'react-icons/md';
-
-export interface iOrganizer {
-  id: number;
-  name: string;
-  email: string;
-  cellNumber: string;
-  address: string;
-  status: 'active' | 'inactive';
-  createdAt: string;
-  eventCount: number;
-  revenue: number;
-}
 
 const initialOrganizers: iOrganizer[] = [
   {

@@ -3,9 +3,9 @@ import { JSX } from 'react';
 import styles from './styles.module.css';
 import { TbTemperature, TbWind } from 'react-icons/tb';
 import { WiHumidity } from 'react-icons/wi';
-import { iWeatherData } from '..';
 import Image from 'next/image';
 import LockUp from '@/components/Common/lockup';
+import { iWeatherData } from '..';
 
 interface iWeatherWidgetProps {
   data: iWeatherData;

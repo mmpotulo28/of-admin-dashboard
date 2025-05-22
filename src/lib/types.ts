@@ -237,3 +237,15 @@ export enum iStatus {
   Rejected = 'REJECTED',
   Suspended = 'SUSPENDED',
 }
+
+export interface iOrganizer {
+  id: number;
+  name: string;
+  email: string;
+  cellNumber: string;
+  address: string;
+  status: 'active' | 'inactive';
+  createdAt: string;
+  eventCount: number;
+  revenue: number;
+}

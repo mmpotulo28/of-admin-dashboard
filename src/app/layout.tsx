@@ -10,6 +10,7 @@ import { EventsProvider } from '@/context/EventsContext';
 import { GlobalProvider } from '@/context/TopNavContext';
 import { stackServerApp } from '@/stack';
 import { StackProvider, StackTheme } from '@stackframe/stack';
+import { AccessControlProvider } from '@/context/AccessControlContext';
 
 const customTheme = {
   light: {
@@ -136,20 +137,22 @@ export default function RootLayout({
       <body>
         <StackProvider app={stackServerApp}>
           <StackTheme theme={customTheme}>
-            <GlobalProvider>
-              <EventsProvider>
-                <Providers>
-                  <main className="full-height">
-                    {children}
-                    <ScrollToTop />
-                    <Toaster />
-                  </main>
+            <AccessControlProvider>
+              <GlobalProvider>
+                <EventsProvider>
+                  <Providers>
+                    <main className="full-height">
+                      {children}
+                      <ScrollToTop />
+                      <Toaster />
+                    </main>
 
-                  <CookieConsent />
-                  <Analytics />
-                </Providers>
-              </EventsProvider>
-            </GlobalProvider>
+                    <CookieConsent />
+                    <Analytics />
+                  </Providers>
+                </EventsProvider>
+              </GlobalProvider>
+            </AccessControlProvider>
           </StackTheme>
         </StackProvider>
       </body>

@@ -1,10 +1,9 @@
 import React from 'react';
 import LockUp from '@/components/Common/lockup';
-import { iSize, iTheme } from '@/lib/types';
+import { iOrganizer, iSize, iTheme } from '@/lib/types';
 import Input from '@/components/Common/input';
 import Select from '@/components/Common/select';
 import Actions from '@/components/Common/Actions';
-import { iOrganizer } from '../page';
 
 interface EditOrgFormProps {
   editingOrganizer: iOrganizer | null;

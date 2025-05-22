@@ -2,9 +2,8 @@ import React from 'react';
 import Actions from '@/components/Common/Actions';
 import Pagination from '@/components/pagination';
 import { MdOutlineEdit } from 'react-icons/md';
-import { iSize, iVariant } from '@/lib/types';
+import { iOrganizer, iSize, iVariant } from '@/lib/types';
 import styles from '../organizers.module.css';
-import { iOrganizer } from '..';
 
 interface OrgTableProps {
   paginatedOrganizers: iOrganizer[];
