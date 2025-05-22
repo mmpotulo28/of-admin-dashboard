@@ -1,0 +1,243 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 0px;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--foreground);
+}
+
+.chatContainer {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 0px;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  height: fit-content;
+}
+
+.chatContainer.user .header {
+  background-color: color-mix(in srgb, var(--foreground) 50%, transparent 50%);
+}
+
+.chatContainer.org .header {
+  background-color: color-mix(in srgb, var(--foreground) 100%, transparent 0%);
+}
+
+.chatContainer.admin .header {
+  background-color: var(--foreground);
+}
+
+.channelUsers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 7px;
+  height: 40px;
+  aspect-ratio: 1/1;
+  border: 2px dashed var(--theme-color);
+  border-inline: 2px dashed var(--background);
+  border-radius: 999px;
+  animation: channelUsersAnime 1s linear infinite alternate;
+}
+
+.channelUsers span {
+  color: var(--theme-color);
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  /* font-family: cursive; */
+  animation: channelUsersAnime 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate-reverse;
+}
+
+.error {
+  background-color: rgba(255, 0, 0, 0.244);
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #f9f9f9;
+  border-radius: 8px 0 0 8px;
+  padding: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(50px, auto));
+}
+
+.eventList {
+  padding: 0 10px;
+}
+
+.eventItem:hover,
+.eventItem.active {
+  background-color: #ddd;
+}
+
+.chatContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  background-image: url('/image/NpcPgoMH.jpg');
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.messageList {
+  list-style: none;
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.messageItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  padding: 2px 15px;
+  border: 2px solid #ccc;
+  border-radius: 20px 5px 5px 0px;
+  color: rgba(6, 0, 32, 0.836);
+  gap: 2px;
+  transition: all 0.3s ease-in-out;
+  padding-top: 5px;
+  background-color: var(--background);
+}
+
+.messageItem.outgoing {
+  align-self: flex-end;
+  border: 2px solid var(--theme-color);
+  border-radius: 5px 30px 0px 5px;
+}
+
+.messageItem.outgoing .messageHeader {
+  flex-direction: row-reverse;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  gap: 10px;
+  padding-bottom: 2px;
+}
+
+.messageEvent {
+  font-weight: bold;
+}
+
+.messageTimestamp,
+.messageSender {
+  font-size: 10px;
+  color: #949393;
+}
+
+.messageSender {
+  font-weight: bold;
+  color: var(--theme-color);
+  font-size: 12px;
+}
+
+.messageContent {
+  margin: 0;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  background-color: var(--background);
+}
+
+.formContainer h2 {
+  margin-bottom: 10px;
+}
+
+.formContainer input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #eee;
+  color: var(--foreground);
+  resize: vertical;
+  height: 40px;
+}
+
+/* channelUsers animation */
+@keyframes channelUsersAnime {
+  0% {
+    transform: rotateZ(-30deg);
+  }
+
+  100% {
+    transform: rotateZ(30deg);
+  }
+}
+
+.skeleton {
+  min-width: 200px;
+  opacity: 0.5;
+  animation: pulse 1.5s infinite;
+  border: 2px solid #ccc !important;
+}
+
+.messageContentSkeleton {
+  height: 16px;
+  width: 80%;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.messageHeaderSkeleton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.messageSenderSkeleton,
+.messageTimestampSkeleton {
+  height: 12px;
+  width: 30%;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
