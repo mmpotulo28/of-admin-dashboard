@@ -1,0 +1,25 @@
+{
+  "name": "accordion",
+  "version": "1.0.1",
+  "description": "Global Site accordion",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "accordion": [
+    "header"
+  ],
+  "author": "Manelisi Mpotulo",
+  "license": "ISC",
+  "peerDependencies": {
+    "lockup": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "lockup": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "accordion": "file:"
+  }
+}

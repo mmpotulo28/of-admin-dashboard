@@ -1,0 +1,157 @@
+.topBanner {
+  display: flex;
+  flex-direction: row;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 93vh;
+  margin-top: -30px;
+  overflow: hidden;
+}
+
+.topBanner.centered .gradientUp {
+  align-items: center;
+  text-align: center;
+}
+
+.topBanner.centered .bannerContent {
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  transform: translateY(-20px);
+}
+
+.topBanner.centered .bannerContent h1 {
+  background: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: initial;
+  text-align: center;
+}
+
+.topBanner.centered .bannerContent h1::first-letter {
+  font-size: inherit;
+}
+
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  gap: 20px;
+  max-width: 600px;
+  background-color: var(--background);
+  min-height: 93vh;
+  min-width: 60%;
+  border-radius: 0 0 900px 0;
+  overflow: hidden;
+}
+
+.rightContent {
+  background-color: var(--theme-color);
+  min-width: 50%;
+  max-height: 90vh;
+  border-radius: 900px 0 0 20px;
+  outline: 2px dashed var(--foreground);
+  outline-offset: 20px;
+  margin-top: 20px;
+}
+
+.bannerContent h1::first-letter {
+  font-size: 70px;
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+}
+
+.logo img {
+  border-radius: 10px;
+}
+
+.skeleton {
+  opacity: 0.5;
+  animation: pulse 1.5s infinite;
+}
+
+.skeletonBlock {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.skeleton .title {
+  height: 40px;
+  width: 60%;
+  margin: 20px auto;
+}
+
+.skeleton .content {
+  height: 20px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.skeleton .actions {
+  height: 30px;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.skeleton .image {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.widget {
+  scale: 0.7;
+  position: absolute;
+  bottom: 28%;
+  right: 1%;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gradientUp {
+    padding: 40px 5px;
+  }
+
+  .bannerContent {
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 20px;
+  }
+
+  .rightContent {
+    min-width: 30%;
+    border-radius: 0 999px 999px 0;
+    max-height: 90vh;
+    margin: 30px 0;
+  }
+
+  .bannerContent h1 {
+    font-size: 35px;
+  }
+
+  .widget {
+    background: var(--foreground) !important;
+    scale: 0.5 !important;
+    display: none;
+  }
+}

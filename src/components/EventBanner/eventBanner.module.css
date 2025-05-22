@@ -1,0 +1,110 @@
+.eventBanner {
+  min-height: 93vh;
+  background-position: top;
+  background-size: cover;
+  color: white;
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url('/image/background-event2.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.details {
+  min-width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  padding-bottom: 0;
+  gap: 40px;
+  background-color: color-mix(in srgb, var(--foreground) 50%, transparent 50%);
+  background-blend-mode: overlay;
+}
+
+.detailsLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  min-height: 200px;
+  width: 100%;
+}
+
+.detailsRight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  transform: translateX(-50%);
+}
+
+/* on mobile */
+@media (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .scrollDown {
+    display: none;
+  }
+}
+
+.skeleton {
+  opacity: 0.5;
+  animation: pulse 1.5s infinite;
+}
+
+.skeletonBlock {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.skeleton .title {
+  height: 40px;
+  width: 60%;
+  margin: 10px 0;
+}
+
+.skeleton .subtitle {
+  height: 20px;
+  width: 80%;
+  margin: 10px 0;
+}
+
+.skeleton .actions {
+  height: 30px;
+  width: 50%;
+  margin: 20px 0;
+}
+
+.skeleton .info {
+  height: 40px;
+  width: 90%;
+  margin: 10px 0;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}

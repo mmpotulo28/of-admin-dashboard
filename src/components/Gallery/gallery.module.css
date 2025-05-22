@@ -1,0 +1,82 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 0;
+  height: fit-content;
+}
+
+.imageContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px 20px !important;
+  align-items: center;
+  justify-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px var(--neutral-color);
+}
+
+.imageContainer img:hover,
+.gallerySec img:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* the first image should occupied 2 rows */
+.imageContainer img:first-child {
+  grid-row: 1/-3;
+  max-height: 100%;
+}
+
+.imageContainer img:last-child {
+  grid-column: 2/-1;
+}
+
+/* secondary variant */
+.gallerySec {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 200px;
+  gap: 10px;
+}
+
+.gallerySec img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+
+/* set the first image in gallery to occupy all columns */
+.gallerySec img:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: unset;
+  max-height: 350px;
+}
+
+.gallerySecSingle {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.gallerySecSingle img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}

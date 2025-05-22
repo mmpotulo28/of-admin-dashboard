@@ -1,0 +1,13 @@
+.skeletonCell {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 8px;
+}

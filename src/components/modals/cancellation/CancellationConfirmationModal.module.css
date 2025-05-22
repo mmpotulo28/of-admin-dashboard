@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.actions {
+  display: flex;
+  /* justify-content: flex-end; */
+  gap: 10px;
+}
+
+.error {
+  color: rgb(255, 79, 79);
+  font-size: var(--fs-small);
+  margin-top: 10px;
+}

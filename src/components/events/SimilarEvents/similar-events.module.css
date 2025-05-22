@@ -1,0 +1,28 @@
+.similarEvents {
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  background-color: var(--background-light);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: 0px;
+  -ms-overflow-style: none; /* IE and Edge */
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  -webkit-scrollbar: none; /* Safari and Chrome */
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}

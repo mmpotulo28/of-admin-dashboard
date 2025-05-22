@@ -1,0 +1,73 @@
+.contentCards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--foreground);
+  color: var(--background) !important;
+}
+
+.contentCards.light {
+  background-color: var(--background);
+  color: var(--foreground) !important;
+}
+
+.topContent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 390px;
+  border-radius: 0px;
+}
+
+.card.centered {
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.card.padded {
+  padding: 20px;
+}
+
+.card .icon {
+  font-size: 40px;
+  color: var(--theme-color);
+}
+
+.card h3 {
+  /* color: var(--background); */
+  font-size: 20px;
+}
+
+.card.highlighted h3 {
+  color: var(--theme-color);
+}
+
+.card p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .contentCards {
+    padding: 20px;
+  }
+}

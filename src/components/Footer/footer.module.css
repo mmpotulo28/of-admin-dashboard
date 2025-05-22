@@ -1,0 +1,152 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 60px;
+  gap: 80px;
+  width: fit-content;
+  min-width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  background: var(--foreground);
+}
+
+.container,
+.newsletter,
+.content,
+.actions,
+.form,
+.input,
+.button,
+.privacyText,
+.links,
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  border-radius: 0;
+}
+
+.container {
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+.newsletter {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 78px;
+  color: var(--theme-color);
+}
+
+.content {
+  flex-wrap: wrap;
+  width: fit-content !important;
+}
+
+.content p {
+  color: var(--background);
+}
+
+.actions {
+  gap: 12px;
+  min-height: 78px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.privacyText {
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  font-size: 12px;
+  color: var(--theme-color);
+  margin-top: -10px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-items: center;
+}
+
+.links .linkGroup {
+  gap: 0px;
+  flex-direction: column;
+  color: #ecfdf3;
+  list-style-type: none;
+}
+
+.links .linkGroup ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.links .linkGroup ul li:hover {
+  color: var(--theme-color);
+}
+
+.links .linkGroup .linkGroupTitle {
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+.links .linkGroup .linkGroupTitle:hover {
+  color: var(--background);
+}
+
+.links .linkGroup .linkGroupTitle::first-letter {
+  text-transform: uppercase;
+}
+
+.footerBottom {
+  gap: 32px;
+  width: 100%;
+  color: var(--theme-color);
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.footerBottom p {
+  font-size: inherit;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding-inline: 30px;
+  }
+  .form input,
+  .form button {
+    min-width: 100%;
+  }
+
+  .links {
+    justify-content: flex-start;
+  }
+
+  .newsletter {
+    justify-content: center;
+  }
+}

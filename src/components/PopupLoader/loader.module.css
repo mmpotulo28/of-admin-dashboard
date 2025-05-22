@@ -1,0 +1,109 @@
+.loaderContainer.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: color-mix(in srgb, var(--foreground) 50%, transparent 50%);
+  z-index: 200;
+  backdrop-filter: blur(4px);
+}
+
+.loaderContainer.dot .loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 150px; /* 8em * 16px */
+  height: 50px; /* 1.5em * 16px */
+  padding-block: 2.4px; /* 0.15em * 16px */
+  border: 2px solid var(--theme-color);
+  border-radius: 240px; /* 15em * 16px */
+  background: var(--foreground);
+}
+
+.loaderContainer.dot .dot {
+  width: 30px;
+  height: 30px;
+  background: var(--theme-color);
+  border-radius: 320px; /* 20em * 16px */
+  filter: brightness(1.5);
+  animation: stretch 1.2s linear alternate infinite;
+}
+
+@keyframes stretch {
+  100% {
+    transform: translateX(calc(112px - 2px)); /* 7em * 16px */
+  }
+  35% {
+    width: 48px; /* 3em * 16px */
+  }
+}
+
+/* variant circle */
+.loaderContainer.circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+}
+
+.loaderContainer.circle .outline {
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-color: var(--background);
+  border-bottom: 2px dashed var(--theme-color);
+  border-top: 2px dashed var(--foreground);
+  border-left: 2px dashed var(--background);
+  border-right: 2px dashed var(--background);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 3s linear infinite reverse;
+}
+
+.loaderContainer.circle .loader {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-color: var(--background);
+  border-bottom: 20px solid var(--foreground);
+  background-color: var(--background);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.loaderContainer.circle .loader .dot {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-color: var(--background);
+  border: 1px solid var(--foreground);
+  border-bottom: 13px solid var(--theme-color);
+  border-radius: 50%;
+  animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite reverse;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

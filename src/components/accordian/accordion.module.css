@@ -1,0 +1,101 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--background);
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+.accordion * {
+  box-sizing: border-box;
+}
+
+.accordion .topContent {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background);
+  padding: 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s ease-in;
+}
+
+.accordion-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background);
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.accordion-item-header i {
+  color: var(--theme-color) !important;
+}
+
+.accordion-item-header .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.accordion-item-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--theme-color);
+}
+
+.accordion-item-header h3 {
+  margin: 0;
+  font-size: 14px;
+  color: grey;
+}
+
+.accordion-item-content {
+  display: block;
+  max-height: 0;
+  height: fit-content;
+  background-color: var(--background);
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  padding: 0px;
+}
+
+.accordion-item-content p {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-item.active .accordion-item-content {
+  max-height: 500px;
+  padding: 10px 0;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination .pages {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.pagination .pages .page.active {
+  color: var(--theme-color);
+}

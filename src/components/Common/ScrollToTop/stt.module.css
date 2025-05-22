@@ -1,0 +1,38 @@
+.scrollToTop {
+  display: flex;
+  position: fixed;
+  bottom: 50;
+  right: 30;
+  z-index: 10;
+  border-radius: 10px;
+  font-size: 30px !important;
+  scale: 1.2;
+  /* overflow: hidden; */
+  /* background-color: var(--background);
+	border: 2px solid var(--theme-color); */
+  /* box-shadow: 1px 1px 2px var(--neutral-color); */
+  transition: all 0.3s ease;
+}
+
+.scrollToTop:hover button {
+  animation: none;
+  transform: translate(0, 0);
+}
+
+/* .scrollToTop button {
+	animation: scrollAnime infinite ease-in 2s forwards;
+} */
+
+@keyframes scrollAnime {
+  0% {
+    transform: translateY(27px);
+  }
+
+  50% {
+  }
+
+  100% {
+    transform: translateY(-27px);
+    /* transform: translateY(-30px); */
+  }
+}

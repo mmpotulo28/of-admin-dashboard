@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+.ticketContainer {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  background: white;
+  min-width: 250px;
+  max-width: 1100px;
+  width: 100%;
+  min-height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  opacity: 0.1;
+  font-size: 50px;
+  color: #ccc;
+  pointer-events: none;
+  text-wrap: nowrap;
+  display: none;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  position: relative;
+  /* aspect-ratio: 1/1; */
+  max-height: 250px;
+}
+
+.left .admitOne {
+  position: absolute;
+  left: 0;
+}
+
+.image {
+  min-height: 100%;
+  max-height: 100%;
+  width: 250px;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  opacity: 0.85;
+}
+
+.admitOne {
+  position: absolute;
+  color: darkgray;
+  height: 250px;
+  left: 0;
+  height: 100%;
+  padding: 0 10px;
+  letter-spacing: 0.15em;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  font-size: var(--fs-xsmall);
+}
+
+.admitOne span:nth-of-type(2) {
+  color: white;
+  font-weight: 700;
+}
+
+.ticketNumber {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--background);
+}
+
+.ticketInfo {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-width: 250px;
+}
+
+.vipBadge {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  color: rgba(255, 217, 0, 0.26);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: var(--fs-small);
+  z-index: 3;
+  min-width: 80px;
+  min-height: 80px;
+  aspect-ratio: 1/1;
+  z-index: 0;
+}
+
+.date {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 5px 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  width: 100%;
+}
+
+.date span:first-of-type {
+  text-align: left;
+}
+
+.date span:last-of-type {
+  text-align: right;
+}
+
+.june29 {
+  color: var(--theme-color);
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+
+.showName {
+  font-size: var(--fs-xxlarge);
+  font-family: 'Arizonia', cursive;
+  font-style: normal;
+  color: var(--theme-color);
+  margin-top: 25px;
+}
+
+.showName h1 {
+  font-size: var(--fs-large);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--foreground);
+  font-family: initial;
+  font-size: var(--fs-large);
+}
+
+.time {
+  padding: 10px 0;
+  color: var(--theme-color);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+  font-size: 12px !important;
+
+  font-weight: 700;
+}
+
+.time span {
+  font-weight: 400;
+  color: gray;
+  font-size: var(--fs-xxsmall);
+}
+
+.time p {
+  font-size: var(--fs-small);
+}
+
+.location {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 8px;
+  color: #777777;
+  border-top: 1px dashed #aaa;
+}
+
+.location .separator {
+  font-size: 20px;
+}
+
+.location span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.right {
+  width: 180px;
+  max-width: 100%;
+  border-left: 1px dashed #404040;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right .admitOne {
+  color: darkgray;
+}
+
+.right .admitOne span:nth-of-type(2) {
+  color: gray;
+}
+
+.right .ticketNumber {
+  left: auto;
+  right: 0;
+}
+
+.right .rightInfoContainer {
+  min-height: 250px;
+  min-width: 250px;
+  padding: 10px 10px 10px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  align-items: center;
+  gap: 5px;
+}
+
+.right .showName h1 {
+  font-size: var(--fs-large);
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.qrCode span {
+  margin-top: 10px;
+  color: grey;
+  font-size: 12px;
+}
+
+.right .ticketNumber {
+  color: gray;
+  width: fit-content;
+  height: fit-content;
+}
+
+.logo {
+  padding-bottom: 10px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+/* on mobile */
+@media (max-width: 768px) {
+  .shadow {
+    max-width: 300px;
+  }
+  .ticketContainer {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    max-width: 100%;
+    max-width: 300px;
+  }
+
+  .ticketInfo {
+    padding: 10px;
+  }
+
+  .image {
+    display: flex;
+    min-height: 250px;
+    min-width: 250px;
+    width: 100%;
+  }
+
+  .date {
+    flex-wrap: nowrap;
+    font-size: var(--fs-xsmall);
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .june29 {
+    font-size: var(--fs-xsmall);
+  }
+
+  .right {
+    border-left: none;
+    border-top: 1px dashed #404040;
+  }
+
+  .rightInfoContainer {
+    justify-content: center;
+    align-items: center;
+    padding: 0px !important;
+  }
+
+  .location {
+    gap: 10px;
+  }
+  .showName {
+    margin-top: 20px;
+  }
+
+  .showName h1 {
+    font-size: var(--fs-medium);
+  }
+
+  .vipBadge {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.skeleton {
+  opacity: 0.5;
+}
+
+.skeletonBlock {
+  background: #e0e0e0;
+  animation: pulse 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton .image {
+  height: 100%;
+  width: 100%;
+}
+
+.skeleton .date,
+.skeleton .showName,
+.skeleton .time,
+.skeleton .location,
+.skeleton .qrCode,
+.skeleton .ticketNumber {
+  height: 30px;
+  margin: 10px 0;
+  border: none;
+}
+
+.skeleton .date {
+  width: 80%;
+}
+
+.skeleton .showName {
+  width: 60%;
+}
+
+.skeleton .time {
+  width: 70%;
+}
+
+.skeleton .location {
+  width: 90%;
+}
+
+.skeleton .qrCode {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.skeleton .ticketNumber {
+  width: 50%;
+  margin-right: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}

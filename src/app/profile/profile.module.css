@@ -1,0 +1,150 @@
+.dashboardCards {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  max-width: 100%;
+  width: 100%;
+  gap: 20px;
+}
+
+.dashboardCards .profileInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 5px;
+  gap: 20px;
+  position: relative;
+}
+
+.dashboardCards .profileInfo h3 {
+  font-size: 25px;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+.dashboardCards .profileInfo form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  gap: 20px;
+}
+
+.dashboardCards .profileInfo form .socialLinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 100%;
+  gap: 20px;
+  grid-column: 1 / -1;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.dashboardCards .profileInfo form .socialLinks h3 {
+  font-size: 20px;
+  color: var(--theme-color);
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.dashboardCards .profileInfo form .socialLinks .socialLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0px;
+}
+
+.dashboardCards .profileInfo form .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.dashboardCards .profileBioRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 20px;
+  max-width: 400px;
+  min-width: 250px;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+.dashboardCards .profileBioRight h3 {
+  font-size: 20px;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+.dashboardCards .profileBioRight .profileImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: calc(100%);
+  min-height: 200px;
+  max-width: calc(100%);
+  max-height: 200px;
+  background-color: var(--background);
+  border-radius: 5px;
+  align-self: center;
+}
+
+.dashboardCards .profileBioRight .profileImage img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.dashboardCards .profileBioRight .profileBio .socialLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.dashboardCards .profileBioRight .profileBio .socialLinks .socialLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboardCards .profileBioRight .profileBio .socialLinks .icon {
+  color: var(--theme-color);
+}
+
+/* on mobile */
+@media (max-width: 768px) {
+  .dashboardCards {
+    grid-template-columns: 1fr;
+  }
+  .dashboardCards .profileInfo {
+    width: 100%;
+  }
+  .dashboardCards .profileBioRight {
+    width: 100%;
+    max-width: none;
+  }
+
+  .dashboardCards .profileBioRight .profileBio .socialLinks {
+    flex-direction: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}

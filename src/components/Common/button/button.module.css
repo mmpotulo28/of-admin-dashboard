@@ -1,0 +1,138 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--theme-color);
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  width: fit-content;
+}
+
+.button span {
+  display: flex;
+  justify-content: center;
+}
+
+.loadingIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 1s linear infinite;
+  font-size: var(--fs-medium);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button.centered {
+  justify-content: center !important;
+}
+
+.iconButton {
+  /* border-radius: 999px !important; */
+  padding: 5px 3px !important;
+  aspect-ratio: 1/1;
+}
+
+.button.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.button::first-letter {
+  text-transform: uppercase;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  background-color: var(--theme-color);
+  color: white;
+  border-color: var(--theme-color);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button.primary {
+  background-color: var(--theme-color);
+  color: white;
+  border-color: var(--theme-color);
+}
+
+.button.primary:hover {
+  background-color: var(--background);
+  color: var(--theme-color);
+}
+
+/* secondary button */
+.button.secondary {
+  background-color: white;
+  color: var(--theme-color);
+}
+
+.button.secondary:hover {
+  background-color: var(--theme-color);
+  color: var(--background);
+}
+
+/* tertiary button */
+.button.tertiary {
+  background-color: transparent;
+  color: var(--theme-color);
+  border-color: transparent;
+}
+
+.button.tertiary:hover {
+  background-color: var(--background);
+  color: var(--theme-color);
+}
+
+/* Quaternary Button */
+.button.quaternary {
+  background: linear-gradient(
+    90deg,
+    var(--foreground),
+    var(--theme-color)
+  ) !important;
+  color: var(--background);
+}
+
+.button.quaternary:hover {
+  background: linear-gradient(
+    90deg,
+    var(--theme-color),
+    var(--foreground)
+  ) !important;
+  color: var(--background);
+}
+
+/* small button (sm)*/
+.button.sm {
+  font-size: 14px;
+  height: 30px;
+}
+
+/* medium button (md)*/
+.button.md {
+  font-size: 14px;
+  height: 35px;
+}
+
+/* large button (lg)*/
+.button.lg {
+  font-size: 16px;
+  height: 40px;
+}

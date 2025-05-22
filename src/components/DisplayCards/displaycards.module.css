@@ -1,0 +1,15 @@
+.displayCards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px 0;
+}
+
+.cards {
+  display: flex;
+  /* justify-content: center; */
+  margin: 0 auto;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}

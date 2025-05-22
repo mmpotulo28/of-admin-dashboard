@@ -1,0 +1,65 @@
+.skeleton {
+  opacity: 0.5;
+}
+
+.skeletonBlock {
+  background: #e0e0e0;
+  animation: pulse 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton .image {
+  height: 100%;
+  width: 100%;
+}
+
+.skeleton .date,
+.skeleton .showName,
+.skeleton .time,
+.skeleton .location,
+.skeleton .qrCode,
+.skeleton .ticketNumber {
+  height: 30px;
+  margin: 10px 0;
+  border: none;
+}
+
+.skeleton .date {
+  width: 80%;
+}
+
+.skeleton .showName {
+  width: 60%;
+}
+
+.skeleton .time {
+  width: 70%;
+}
+
+.skeleton .location {
+  width: 90%;
+}
+
+.skeleton .qrCode {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.skeleton .ticketNumber {
+  width: 50%;
+  margin-right: 20px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}

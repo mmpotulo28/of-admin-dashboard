@@ -1,0 +1,96 @@
+.stepIndicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step span {
+  font-size: 14px;
+  color: var(--foreground);
+  font-weight: bold;
+  margin-top: 10px;
+  text-wrap: nowrap;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 19%;
+  right: calc(-50% - 30px);
+  width: calc(100% + 40px);
+  height: 10px;
+  border-radius: 20px;
+  background-color: var(--foreground);
+  z-index: 0;
+}
+
+.step.active {
+  color: var(--theme-color);
+}
+
+.step:hover .circle {
+  background-color: var(--neutral-color) !important;
+  color: var(--background) !important;
+  cursor: pointer;
+}
+
+.step .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: 2px solid var(--theme-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--theme-color);
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.step.active .circle {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+.step.completed .circle {
+  background-color: var(--foreground);
+  border: 2px solid var(--theme-color);
+}
+
+/* on mobile */
+@media (max-width: 768px) {
+  .step {
+    position: relative;
+  }
+
+  .step span {
+    display: none;
+  }
+
+  .step:hover span {
+    display: inline;
+    position: absolute;
+    top: -30px;
+    color: var(--theme-color);
+  }
+
+  .step:not(:last-child)::after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

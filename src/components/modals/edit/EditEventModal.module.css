@@ -1,0 +1,88 @@
+.container {
+  display: grid;
+  width: 100%;
+  background-color: var(--background);
+  border-radius: 8px;
+  gap: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 4px;
+  min-height: 40px;
+  color: var(--foreground);
+}
+
+.formGroup {
+  min-width: 100%;
+  grid-column: 1/-1;
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.actions {
+  grid-column: 1/-1;
+  display: flex;
+}
+
+.ticketType {
+  padding: 10px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  width: 100%;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  position: relative;
+}
+
+.ticketType h3 {
+  grid-column: 1/-1;
+}
+
+.removeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--theme-color);
+  font-size: var(--fs-small);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  color: var(--foreground);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.note {
+  font-size: 12px;
+  color: gray;
+  margin-top: -10px;
+}

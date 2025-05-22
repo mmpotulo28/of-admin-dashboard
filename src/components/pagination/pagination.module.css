@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 0px 0;
+}
+
+.pagination .pages {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.pagination .pages .page.active {
+  color: var(--theme-color);
+}
+
+.itemsPerPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemsPerPage select {
+  padding: 3px 5px !important;
+}

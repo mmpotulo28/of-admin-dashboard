@@ -1,0 +1,17 @@
+{
+  "name": "display-card",
+  "version": "1.0.0",
+  "description": "Card Component",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "card"
+  ],
+  "author": "Manelisi Mpotulo",
+  "license": "ISC",
+  "dependencies": {
+    "display-card": "file:"
+  }
+}

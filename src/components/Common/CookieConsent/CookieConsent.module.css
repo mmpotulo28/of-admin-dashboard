@@ -1,0 +1,27 @@
+.cookieConsentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-top: 2px solid var(--theme-color);
+  border-radius: 10px;
+}
+
+.cookieConsentContainer p {
+  margin: 0;
+  font-size: var(--fs-small);
+  color: #333;
+}
+
+.cookieConsentLink {
+  color: var(--theme-color);
+  text-decoration: underline;
+}

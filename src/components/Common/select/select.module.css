@@ -1,0 +1,52 @@
+.selectContainer {
+  position: relative;
+}
+
+.selectContainer select {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #eee;
+  color: var(--foreground);
+}
+
+/* hover effect */
+.selectContainer select:hover {
+  background-color: #ddd;
+}
+
+/* focus effect */
+.selectContainer select:focus {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 5px var(--theme-color);
+}
+
+.selectContainer label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 0.75rem;
+  color: transparent;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+.selectContainer select:not(:placeholder-shown) + label {
+  top: 5px;
+  color: rgb(107, 107, 107);
+  background-color: white;
+  transform: 0;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
